@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jev Slop Detector</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="logo" aria-hidden="true">J</span>
+        <div>
+          <h1>Jev Slop Detector</h1>
+          <p id="version">Diagnostics</p>
+        </div>
+      </header>
+
+      <section class="api-settings" aria-labelledby="api-settings-title">
+        <h2 id="api-settings-title">Jev API</h2>
+        <p id="api-mode" class="api-mode">Checking configuration…</p>
+        <form id="api-key-form">
+          <label for="api-key">TypeSafe API key</label>
+          <input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your API key">
+          <button id="save-key" type="submit">Save key and enable Jev</button>
+        </form>
+        <button id="use-mock" class="secondary" type="button" hidden>Remove key and use mock</button>
+        <p class="security-note">Stored in this extension's local browser storage. Refresh LinkedIn after changing modes.</p>
+      </section>
+
+      <div id="status" class="status loading">Checking this tab…</div>
+
+      <dl id="metrics" hidden>
+        <div><dt>Post candidates</dt><dd id="candidates">0</dd></div>
+        <div><dt>Observed</dt><dd id="observed">0</dd></div>
+        <div><dt>Classified</dt><dd id="classified">0</dd></div>
+        <div><dt>Badges</dt><dd id="badges">0</dd></div>
+        <div><dt>Skipped</dt><dd id="skipped">0</dd></div>
+        <div><dt>Errors</dt><dd id="errors">0</dd></div>
+      </dl>
+
+      <p id="detail" class="detail"></p>
+      <section id="extractions" hidden>
+        <h2>Extracted text</h2>
+        <div id="extraction-list"></div>
+      </section>
+      <button id="rescan" type="button" hidden>Rescan page</button>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

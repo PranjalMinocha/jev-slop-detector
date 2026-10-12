@@ -1,0 +1,5 @@
+.brave-live-profile/
+.brave-e2e-profile/
+node_modules/
+.env
+.DS_Store

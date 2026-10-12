@@ -1,0 +1,206 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  background: Canvas;
+  color: CanvasText;
+}
+
+main {
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.logo {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 8px;
+  background: #0a66c2;
+  color: white;
+  font-weight: 800;
+}
+
+h1,
+header p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 14px;
+}
+
+header p {
+  margin-top: 2px;
+  color: #666;
+  font-size: 11px;
+}
+
+.status {
+  padding: 9px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.status.loading { background: #eaf2fb; color: #174f86; }
+.status.success { background: #e5f5eb; color: #17663b; }
+.status.warning { background: #fff3cf; color: #745300; }
+.status.error { background: #fde8e6; color: #9e261b; }
+
+.api-settings {
+  padding: 10px;
+  border: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+  border-radius: 8px;
+}
+
+.api-mode,
+.security-note {
+  margin: 0 0 8px;
+  color: #666;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.api-mode.enabled { color: #17663b; }
+.api-mode.mock { color: #745300; }
+.api-mode.error { color: #9e261b; }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 7px;
+  padding: 8px 9px;
+  border: 1px solid color-mix(in srgb, CanvasText 22%, transparent);
+  border-radius: 6px;
+  background: Canvas;
+  color: CanvasText;
+  font: 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+input:focus {
+  border-color: #0a66c2;
+  outline: 2px solid rgba(10, 102, 194, 0.14);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin: 14px 0 0;
+}
+
+dl div {
+  padding: 8px;
+  border: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+  border-radius: 6px;
+}
+
+dt {
+  color: #666;
+  font-size: 10px;
+}
+
+dd {
+  margin: 3px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.detail {
+  min-height: 30px;
+  margin: 12px 0;
+  color: #666;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+section {
+  margin: 0 0 12px;
+}
+
+h2 {
+  margin: 0 0 7px;
+  font-size: 12px;
+}
+
+details {
+  margin-bottom: 6px;
+  border: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+  border-radius: 6px;
+}
+
+summary {
+  padding: 7px 8px;
+  font-size: 11px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+pre {
+  max-height: 180px;
+  margin: 0;
+  padding: 8px;
+  overflow: auto;
+  border-top: 1px solid color-mix(in srgb, CanvasText 12%, transparent);
+  font: 11px/1.45 ui-monospace, SFMono-Regular, Consolas, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+button {
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: #0a66c2;
+  color: white;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+button.secondary {
+  margin-top: 7px;
+  background: transparent;
+  color: #666;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, CanvasText 18%, transparent);
+}
+
+.security-note {
+  margin: 8px 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  header p,
+  dt,
+  .detail,
+  .api-mode,
+  .security-note,
+  button.secondary { color: #aaa; }
+}
